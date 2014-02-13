@@ -21,12 +21,21 @@ This western blot is mainly divided into 4 steps:
 
 Stored at 4°C for several weeks.
 
+The choice of lysis buffer: consideration:
+
+Target site
+
+\bq{begin}
 \table{begin}
 	\r{\d Whole Cell /menberane \d NP40}
 	\r{\d Mitochondria /nuclear \d NP40 or RIPA}
 	\r{\d Soluble cytoplasmic \d Tris-HCl}
 	\r{\d Cytoskeletal bound cytoplasmic\d Tris-Triton}
 \table{end}
+\bq{end}
+
+Compatibility for downstream application
+
 
 
 
@@ -39,6 +48,14 @@ Nonidet-P40 (NP40) buffer
 }
 \alert[info]{Triton X-100 can be used with similar results. Useful variations include lowering the detergent concentration, raising the salt concentration, or switching to other detergents such as saponin, digitonin, or CHAPS.}
 
+
+m cultured cell}
+\list#{
+        \*  replace the culture matrix with ice-cold PBS
+        \*  add ice-cold lysis buffer
+}
+
+\h4{From tissue}
 
 RIPA buffer (Radio Immuno Precipitation Assay buffer)
 \list*{
@@ -72,12 +89,44 @@ Tris-Triton buffer:
 }
 
 \h4{From cultured cell}
+
 \list#{
-	\*  replace the culture matrix with ice-cold PBS
-	\*  add ice-cold lysis buffer
+	\* replace the culture matrix with ice-cold PBS then aspirate it 
+	\* add ice-cold lysis buffer 1ml for 10e7 cell / 10cm dish / 150cm² flask / 1mg cell
+	\* scrape adherent cell (plastic scraper) and transfer to microfuge tube
+	\* agitate the mixture (30min)
+	\* centrifuge and get the supernant
+	\* get the protein concentration
 }
 
 \h4{From tissue}
 
+\list#{
+    \* dissect the tissue on ice
+    \* place it in round-bottom microfuge tubes or Eppendorf tubes and immerse in liquid nitrogen to "snap freeze"
+    \* store at -80°C or immediate homogenization: 5mg tissue for 1ml lysis buffer( including rinse the blade ).
+    \* agitate the mixture (2h)
+	\* centrifuge and get the supernant
+	\* get the protein concentration
+}
 
 
+\h3{Denaturing and reducing sample}
+
+SDS and heating for denaturing and is required for SDS-PAGE. Heating with 95°C for 5min or 70°C for 5-10min if Multi-pass membrande protein. Vortex before and after heating to maximize resolution.
+
+ß-mercaptoethanol or Dithiothreitol(DTT) for reducing the disulphide bridges.
+
+Typical loading buffer:
+
+Laemmli buffer 2X: (4X or 6X also possible)
+\list*{
+    \* 4% SDS
+    \* 10% 2-mercaptoehtanol
+    \* 20% glycerol
+    \* 0.004% bromophenol blue
+    \* 0.125 M Tris HCl
+    \* pH to 6.8
+}
+
+\h3{OR native sample}

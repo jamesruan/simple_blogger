@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 	function buildErrorMessage(e) {
 		return e.line !== undefined && e.column !== undefined
@@ -14,7 +15,7 @@ $(document).ready(function(){
 				var val = $("#input").val();
 				if(val){
 					parsed =  grammar.parse(val);
-					$("#html_output").jsml(parsed);
+//					$("#html_output").jsml(parsed);
 				}
 				$("#message").text("Parsed!");
 			}catch(e)
@@ -27,8 +28,28 @@ $(document).ready(function(){
 		timer = setTimeout(parse, 1000);
 		$("#message").text("Typing...");
 	}
+
+
 	$("#input").keyup(do_parsing)
 		.focusout(do_parsing);
-
-
+    
+$.getJSON( "http://www.insidegfw.com:5984")
+.fail(function( jqxhr, textStatus, error ) {
+var err = textStatus + ", " + error;
+console.log( "Request Failed: " + err );
 });
+
+    
+});
+
+function get_file_list(){
+
+    $.ajax({
+        type:"GET",
+        url:"http://www.insidegfw.com:5984",
+        success: function(data){
+            $("#nav-file").text(data.toString());
+        }
+    });
+    
+}
